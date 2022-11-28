@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en" class="page">
 
 @include('partials/head.html')
 
-<body class="page__body">
+<body class="body">
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <picture>
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+
     </main>
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример include -->
   </div>
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>

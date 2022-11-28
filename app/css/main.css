@@ -1,9 +1,19 @@
 :root {
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
-  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --light-color: #fff;
+  --color-black: #000;
+  --color-light: #fff;
+  --color-gray: #424551;
+  --color-storm: #787a80;
+  --color-ebony: #1e212c;
+  --color-primary: #ff5a30;
+  --color-athens: #f4f5f7;
+  --color-active: #fc3300;
+  --grid-gap: 30px;
+  --hero-slider-speed: 500;
+  --main-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
 }
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
@@ -22,6 +32,34 @@
 }
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable value-keyword-case */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/../fonts/Ubuntu-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/../fonts/Ubuntu-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/../fonts/Lato-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -34,17 +72,15 @@ html {
   box-sizing: inherit;
 }
 
-.page {
+/*.page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
-}
-
-.page__body {
+}*/
+.body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
 
 img {
@@ -104,8 +140,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  padding: 0 15px;
+  max-width: 1260px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -129,6 +165,94 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.header {
+  padding-top: 23px;
+  padding-bottom: 21px;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.header__nav {
+  margin-left: -112px;
+}
+.header--main {
+  background-color: var(--color-light);
+}
+
+.header-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header-contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.header-contacts__link:not(:last-child) {
+  margin-right: 35px;
+}
+
+.contacts-link {
+  padding-left: 53px;
+  background-position: left center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+.contacts-link__caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+.contacts-link__value {
+  font-style: 18px;
+  line-height: 150%;
+  color: #1E212C;
+}
+.contacts-link--call {
+  background-image: url("../img/phone.svg");
+}
+.contacts-link--mail {
+  background-image: url("../img/mail.svg");
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-gray);
 }
 
 .page__body {

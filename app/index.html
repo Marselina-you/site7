@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -7,30 +7,52 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
+  <title>CreateX Construction</title>
   <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
-  <script defer src="js/main.js"></script>
+  <!--<script defer src="js/main.js"></script>-->
 </head>
 
-<body class="page__body">
+<body class="body">
   <div class="site-container">
-    <header class="header">
-  <div class="container"></div>
+    <header class="header header--main">
+  <div class="container header__container ">
+    <a href="#" class="logo">
+      <img src="img/logo.svg" alt="CreateX">
+    </a>
+    <nav class="nav header__nav" title="">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">News </a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="header-contacts">
+        <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+          <span class="contacts-link__caption">Call us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+        <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
+          <span class="contacts-link__caption">Talk to us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+      </div>
+   </div>
 </header>
 
     <main class="main">
-      <picture>
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+
     </main>
     <footer class="footer">
   <div class="container"></div>
 </footer>
 
   </div>
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>
