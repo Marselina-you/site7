@@ -7,14 +7,19 @@
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/header-contacts";
+@import "./components/hero";
+@import "./components/about-section";
+@import "./components/mission";
+@import "./components/services-section";
+@import "./components/form-field";
+
+
+
+
+
 
 
 //small components
 @import "./components/nav";
+@import "./components/video-block";
 // тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
