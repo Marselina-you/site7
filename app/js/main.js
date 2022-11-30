@@ -217,6 +217,19 @@ document.querySelector('.portfolio-section__next').addEventListener('click', () 
   nextActiveSlide.classList.add('slider-visible');
   nextNextActiveSlide.classList.add('slider-visible');
 });
+const testiomonialsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.testimonials__items', {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev'
+  }
+
+  // And if we need scrollbar
+});
 
 /***/ }),
 

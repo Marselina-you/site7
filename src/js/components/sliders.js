@@ -71,3 +71,19 @@ const activeSlide = portSlider.querySelector('.swiper-slide-next');
 
     });
 
+    const testiomonialsSlider = new Swiper('.testimonials__items', {
+      // Optional parameters
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.testimonials__next',
+        prevEl: '.testimonials__prev',
+      },
+
+      // And if we need scrollbar
+
+    });
