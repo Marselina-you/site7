@@ -1,5 +1,9 @@
 .slider-nav {
- @include flex-v-center;
+  @include flex-v-center;
+  position: relative;
+  z-index: 15;
+  user-select: none;
+
 
  &__btn {
   @include flex-all-center;
@@ -24,4 +28,8 @@
   }
  }
 
+}
+.slider-nav__btn.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
