@@ -4,9 +4,8 @@
   color: var(--color-light);
   background-image: url("../img/bg-image.png");
   background-color: var(--color-gray);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  @include bg-cover;
 
   &__content {
     max-width: 590px;

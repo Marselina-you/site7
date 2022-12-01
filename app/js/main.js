@@ -10,6 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/progress.js */ "./src/js/components/progress.js");
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_progress_js__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -149,6 +152,45 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 //import './vendor/focus-visible.js';
+
+/***/ }),
+
+/***/ "./src/js/components/progress.js":
+/*!***************************************!*\
+  !*** ./src/js/components/progress.js ***!
+  \***************************************/
+/***/ (() => {
+
+const circles = document.querySelectorAll('.facts-element__circle');
+circles.forEach(el => {
+  //let percentageProgress;
+
+  if (el.dataset.percentage == 'true') {
+    let progress = el.querySelector('.progress');
+    let valueBlock = el.querySelector('.facts-element__value');
+    let radius = progress.getAttribute('r');
+    let circleLength = 2 * Math.PI * radius;
+    let full = el.dataset.full;
+    let value = el.dataset.value;
+    let percentageProgress = Math.floor(value / full * 100);
+    valueBlock.textContent = value;
+    progress.setAttribute('stroke-dasharray', circleLength);
+    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
+
+    //percentageProgress = 50;
+  } else {
+    let progress = el.querySelector('.progress');
+    let valueBlock = el.querySelector('.facts-element__value');
+    let radius = progress.getAttribute('r');
+    let circleLength = 2 * Math.PI * radius;
+    let percent = el.dataset.percent;
+    let percentageProgress = Math.floor(percent);
+    valueBlock.textContent = percent + '%';
+    //console.log(percentageProgress);
+    progress.setAttribute('stroke-dasharray', circleLength);
+    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
+  }
+});
 
 /***/ }),
 

@@ -148,8 +148,20 @@ a {
   outline: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
+
 .centered {
   text-align: center;
+  width: 100%;
 }
 
 .dis-scroll {
@@ -241,6 +253,58 @@ a {
 
 .section-offset {
   padding-top: 120px;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+}
+.custom-checkbox__text {
+  position: relative;
+  display: inline-block;
+  padding-left: 27px;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+.custom-checkbox__text::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 1px;
+  display: inline-block;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.custom-checkbox__text::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/check.svg");
+  background-position: center;
+  background-size: 10px 8px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.custom-checkbox__input:checked + .custom-checkbox__text::before {
+  background-color: var(--color-primary);
+}
+.custom-checkbox__input:checked + .custom-checkbox__text::after {
+  opacity: 1;
+}
+.custom-checkbox__input:focus + .custom-checkbox__text {
+  outline: 3px solid var(--color-primary);
 }
 
 .slider-nav {
@@ -632,6 +696,10 @@ a {
 .form-field__input::placeholder {
   color: rgb(154, 156, 165);
 }
+.form-field__input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
 .form-field--big {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -639,6 +707,13 @@ a {
 }
 .form-field--big .form-field__input {
   width: 100%;
+}
+.form-field--gray {
+  width: 100%;
+}
+.form-field--gray .form-field__input {
+  width: 100%;
+  background-color: var(--color-athens);
 }
 
 .portfolio-section {
@@ -752,6 +827,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-top: 40px;
 }
 .learn-more__subtitle {
   margin: 0;
@@ -859,6 +935,259 @@ a {
   font-size: 14px;
   line-height: 150%;
   color: var(--color-storm);
+}
+
+.facts {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  padding-top: 180px;
+  padding-bottom: 100px;
+  background-color: var(--color-light);
+}
+.facts::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: -195px;
+  width: 570px;
+  height: 1065px;
+  background-image: url("../img/facts-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.facts__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: 736px;
+  gap: 48px;
+}
+.facts__title {
+  margin-bottom: 62px;
+}
+
+.facts-element__circle {
+  --progress-stroke: #000;
+  --progress-bg-opacity: 0.3;
+  position: relative;
+  margin-bottom: 20px;
+  width: 148px;
+  height: 148px;
+}
+.facts-element__circle svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.facts-element__circle .progress {
+  stroke: var(--progress-stroke);
+  -webkit-transform: rotate(-90deg) translateX(20px);
+  -ms-transform: rotate(-90deg) translateX(20px);
+  transform: rotate(-90deg) translateX(20px);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+.facts-element__circle .progress-bg {
+  stroke: var(--progress-stroke);
+  opacity: var(--progress-bg-opacity);
+}
+.facts-element__circle--one-color {
+  --progress-stroke: #f89828;
+}
+.facts-element__circle--two-color {
+  --progress-stroke: #f52f6e;
+}
+.facts-element__circle--three-color {
+  --progress-stroke: #5a87fc;
+}
+.facts-element__circle--four-color {
+  --progress-stroke: #03cea4;
+}
+.facts-element__value {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--color-ebony);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.facts-element__text {
+  display: block;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-ebony);
+}
+
+.recent-news {
+  padding: 80px;
+  padding-bottom: 120px;
+  background-color: var(--color-light);
+}
+.recent-news__title {
+  margin-bottom: 60px;
+}
+.recent-news__list {
+  margin-bottom: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (255px)[2];
+  grid-template-rows: repeat(2, 255px);
+  gap: var(--grid-gap);
+}
+.recent-news__item {
+  -ms-grid-column-span: 5;
+  grid-column: 5 span;
+}
+.recent-news__item:first-child {
+  -ms-grid-column-span: 7;
+  grid-column: 7 span;
+  -ms-grid-row-span: 2;
+  grid-row: 2 span;
+}
+
+.news-article {
+  overflow: hidden;
+  border-radius: 4px;
+  height: 100%;
+  -webkit-box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background: var(--color-light);
+}
+.news-article__text {
+  padding: 20px 10px;
+}
+.news-article__title {
+  margin: 0;
+  margin-bottom: 13px;
+}
+.news-article__descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-gray);
+}
+.news-article__meta {
+  margin-bottom: 17px;
+}
+.news-article__link {
+  font-weight: 700;
+  font-style: 20px;
+  line-height: 140%;
+  color: var(--color-ebony);
+}
+.news-article--small .news-article__descr {
+  display: none;
+}
+.news-article--small .news-article__text {
+  padding: 12px 24px;
+}
+.news-article--small .news-article__title {
+  margin-bottom: 9px;
+}
+
+.article-meta {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-storm);
+}
+.article-meta__item {
+  position: relative;
+  color: inherit;
+}
+.article-meta__item:not(:last-child) {
+  margin-right: 20px;
+}
+.article-meta__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -13px;
+  top: 2px;
+  width: 1px;
+  height: 11px;
+  color: inherit;
+  background-color: currentColor;
+}
+.article-meta__item--comments {
+  padding-left: 24px;
+  background-image: url("../img/comments.svg");
+  background-position: left center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.contacts-section {
+  padding-top: 80px;
+  padding-bottom: 77px;
+  background-image: url("../img/contacts-bg.jpg");
+  background-color: var(--color-ebony);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contacts-section__form {
+  background-color: var(--color-light);
+}
+.contacts-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.contacts-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 4px;
+  min-width: 495px;
+  padding: 48px 40px;
+  border: 1px solid #E5E8ED;
+  -webkit-box-shadow: 0 60px 80px -20px rgba(30, 33, 44, 0.16), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
+  box-shadow: 0 60px 80px -20px rgba(30, 33, 44, 0.16), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
+}
+.contacts-form__title {
+  margin: 0;
+  margin-bottom: 24px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-ebony);
+}
+.contacts-form__field {
+  margin-bottom: 21px;
+}
+.contacts-form__checkbox {
+  margin-bottom: 22px;
+}
+.contacts-form__btn {
+  padding: 12px 31px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 .nav__list {

@@ -21,6 +21,10 @@
     &::placeholder {
       color: rgba(154, 156, 165, 1);
     }
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
 
 
   }
@@ -29,6 +33,15 @@
 
     .form-field__input {
       width: 100%;
+    }
+  }
+
+  &--gray {
+    width: 100%;
+
+    .form-field__input {
+      width: 100%;
+      background-color: var(--color-athens);
     }
   }
 }
