@@ -152,6 +152,7 @@ a {
   }
 }
 .btn {
+  display: inline-block;
   border-style: solid;
   border-width: 1px;
   border-color: transparent;
@@ -174,7 +175,13 @@ a {
 
     &-light {
       border-color: var(--color-light);
+      color: var(--color-light);
 
+
+    }
+    &-primary {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
     }
   }
 }
@@ -258,4 +265,9 @@ a {
   &__input:focus+&__text {
     outline: 3px solid var(--color-primary);
   }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
 }

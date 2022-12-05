@@ -55,16 +55,14 @@
 //const swiper = new Swiper(el, {
   //slidesPerView: 'auto',
 //});
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+//import Swiper, { Thumb } from 'swiper';
+import Swiper, { Thumb, Navigation, Pagination } from 'swiper';
+Swiper.use([Thumb, Navigation, Pagination]);
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
-  spaceBetween: 30,
+
   loop: true,
-  navigation: {
-    nextEl: '.portfolio-section__next',
-    prevEl: '.portfolio-section__prev',
-  },
+
+
 });
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

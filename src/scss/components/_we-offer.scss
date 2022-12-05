@@ -1,0 +1,33 @@
+.we-offer {
+  padding: 120px 0;
+  padding-bottom: 10px;
+  background-color: var(--color-light);
+
+
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+  }
+  &__image {
+    grid-column: 7 span;
+  }
+  &__content {
+    grid-column: 5 span;
+    padding-left: 75px;
+    padding-top: 5px;
+  }
+  &__title {
+    font-family: "Lato", sans-serif;
+
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-ebony);
+
+  }
+
+
+}
