@@ -1208,6 +1208,10 @@ a {
   background-position: right -8px top 48px;
   background-color: var(--color-light);
 }
+.page-hero--about {
+  background-image: url("../img/about-hero-bg.png");
+  background-color: var(--color-light);
+}
 
 .services {
   overflow: hidden;
@@ -2118,6 +2122,192 @@ a {
 }
 .decisions__item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.achieve {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("../img/achieve-bg.png");
+  background-position: right bottom -350px;
+  background-repeat: no-repeat;
+  background-color: var(--color-light);
+}
+.achieve__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-grid-column-span: 3;
+  grid-column: 3 span;
+  padding-top: 70px;
+  background-position: top center;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+}
+.achieve__item--reccom {
+  background-image: url("../img/like.svg");
+}
+.achieve__item--remov {
+  background-image: url("../img/paint.svg");
+}
+.achieve__item--spec {
+  background-image: url("../img/helmet.svg");
+}
+.achieve__item--finish {
+  background-image: url("../img/like.svg");
+}
+.achieve__value {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--color-primary);
+}
+.achieve__text {
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-ebony);
+}
+.achieve__list {
+  margin-bottom: 260px;
+}
+.achieve__info {
+  position: relative;
+  left: -30px;
+  top: -130px;
+  z-index: 10;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 4px;
+  padding: 80px 82px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+  width: 735px;
+  -webkit-box-shadow: var(--main-shadow);
+  box-shadow: var(--main-shadow);
+  background: var(--color-light);
+}
+.achieve__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.quote {
+  margin: 0;
+}
+.quote__content {
+  position: relative;
+  margin-bottom: 52px;
+  padding: 9px 53px;
+}
+.quote__content::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 28px;
+  height: 20px;
+  background-image: url("../img/braces.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.quote__content P {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-ebony);
+}
+.quote__content P:not(:last-child) {
+  margin-bottom: 30px;
+}
+.quote__footer {
+  padding: 20px 53px;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-storm);
+  background-image: url("../img/signature.svg");
+  background-position: right 65px center;
+  background-size: 100px 68px;
+  background-repeat: no-repeat;
+}
+.quote__author {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-ebony);
+}
+
+.about-mission {
+  background-color: #F4F5F7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.about-mission__list {
+  --mission-gap: 94px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--mission-gap) * 2);
+}
+.about-mission__item {
+  position: relative;
+  padding-top: 71px;
+  text-align: center;
+  background-position: top center;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+}
+.about-mission__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(-1 * var(--mission-gap));
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-image: url("../img/divider.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-mission__item--quality {
+  background-image: url("../img/quality.svg");
+}
+.about-mission__item--safety {
+  background-image: url("../img/safety.svg");
+}
+.about-mission__item--comfort {
+  background-image: url("../img/comfort.svg");
+}
+.about-mission__subtitle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-ebony);
+}
+.about-mission__descr {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-storm);
 }
 
 .footer {
