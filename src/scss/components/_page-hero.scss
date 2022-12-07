@@ -64,4 +64,17 @@
     background-color: var(--color-light);
 
   }
+  &--positions {
+    background-image: url("../img/position-hero-bg.png");
+    background-position: right -9px bottom;
+    //background-position: right -8px top 48px;
+    background-color: var(--color-light);
+
+  }
+  &--news {
+    background-image: url("../img/news-hero-bg.png");
+    background-position: right -9px bottom;
+    background-color: #F4F5F7;;
+
+  }
 }
