@@ -14,7 +14,9 @@
 @import "./components/services-section";
 @import "./components/form-field";
 @import "./components/portfolio-section";
+@import "./components/news-articles";
 
+@import "./components/social";
 @import "./components/learn-more";
 @import "./components/partners";
 @import "./components/testimonials";
@@ -43,7 +45,8 @@
 @import "./components/positions-content";
 @import "./components/employee-benefits";
 @import "./components/categories";
-@import "./components/news-articles";
+@import "./components/post";
+
 
 
 @import "./components/footer";
@@ -57,7 +60,7 @@
 
 //small components
 @import "./components/breadcrumbs";
-@import "./components/social";
+
 @import "./components/nav";
 @import "./components/video-block";
 // тестовые стили, удалите их
